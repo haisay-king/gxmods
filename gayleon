@@ -1,0 +1,23 @@
+// ==UserScript==
+// @name         GitHub Text Black
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Ein einfaches Userscript, um die Textfarbe auf GitHub-Seiten auf Schwarz zu ändern
+// @author       Dein Name
+// @match        https://github.com/*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // Ändert die Textfarbe der gesamten Seite auf Schwarz
+    document.body.style.color = '#000000';
+
+    // Optional: Ändert die Textfarbe spezifischer Elemente auf Schwarz
+    var textElements = document.querySelectorAll('*');
+    textElements.forEach(element => {
+        element.style.color = '#000000';
+    });
+
+})();
